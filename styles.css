@@ -586,3 +586,224 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 1.8rem;
     }
 }
+/* =====================
+   RESPONSIVE MOBILE
+   ===================== */
+
+@media (max-width: 768px) {
+    
+    /* SLIDER PRINCIPAL */
+    .slider-wrapper {
+        padding: 20px 0;
+    }
+    
+    .slider-container {
+        margin: 0 10px;
+    }
+    
+    .slider-card {
+        height: 300px; /* Reducir altura en móvil */
+    }
+    
+    .slider-card h3 {
+        font-size: 1.2rem;
+    }
+    
+    .slider-card p {
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+    }
+    
+    /* Flechas del slider más pequeñas */
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
+    
+    .slider-arrow.prev {
+        left: 5px;
+    }
+    
+    .slider-arrow.next {
+        right: 5px;
+    }
+    
+    /* Indicadores y contador */
+    .slider-indicators {
+        margin-top: 15px;
+    }
+    
+    .slide-counter {
+        font-size: 0.9rem;
+        margin-top: 10px;
+    }
+    
+    /* GRID DE PROYECTOS */
+    .projects-section {
+        padding: 40px 0;
+    }
+    
+    .projects-section h2 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr; /* Una sola columna en móvil */
+        gap: 20px;
+        padding: 0 15px;
+    }
+    
+    .project-card-content h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-card-content p {
+        font-size: 0.9rem;
+    }
+    
+    /* MODAL */
+    .modal {
+        padding: 10px;
+        align-items: flex-start;
+        overflow-y: auto;
+    }
+    
+    .modal-box {
+        width: 95%;
+        max-width: 100%;
+        margin: 20px auto;
+        max-height: none;
+        padding: 15px;
+    }
+    
+    .modal-close {
+        top: 10px;
+        right: 10px;
+        width: 35px;
+        height: 35px;
+        font-size: 1.8rem;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .modal-header p {
+        font-size: 0.9rem;
+    }
+    
+    /* Imagen principal del modal */
+    .modal-main-image {
+        height: 250px; /* Altura reducida para móvil */
+        margin: 15px 0;
+    }
+    
+    .modal-main-image img {
+        max-height: 250px;
+    }
+    
+    /* Flechas de navegación del modal */
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1.5rem;
+    }
+    
+    .nav-arrow.prev {
+        left: 5px;
+    }
+    
+    .nav-arrow.next {
+        right: 5px;
+    }
+    
+    /* Contador de imágenes */
+    .current-image-indicator {
+        bottom: 5px;
+        font-size: 0.85rem;
+        padding: 4px 10px;
+    }
+    
+    /* Galería de miniaturas */
+    .modal-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+        gap: 8px;
+        margin-top: 15px;
+        max-height: 150px;
+    }
+    
+    .modal-gallery-item {
+        height: 70px;
+    }
+    
+    .image-number {
+        font-size: 0.7rem;
+        padding: 2px 6px;
+    }
+}
+
+/* Para pantallas muy pequeñas (menos de 480px) */
+@media (max-width: 480px) {
+    
+    .slider-card {
+        height: 250px;
+    }
+    
+    .slider-card h3 {
+        font-size: 1rem;
+    }
+    
+    .slider-card p {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .modal-main-image {
+        height: 200px;
+    }
+    
+    .modal-main-image img {
+        max-height: 200px;
+    }
+    
+    .modal-header h2 {
+        font-size: 1.1rem;
+    }
+    
+    .modal-gallery {
+        grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+        gap: 6px;
+    }
+    
+    .modal-gallery-item {
+        height: 60px;
+    }
+}
+
+/* Mejoras generales para touch en móviles */
+@media (hover: none) and (pointer: coarse) {
+    
+    /* Hacer los botones más grandes para tocar */
+    .slider-arrow,
+    .nav-arrow {
+        opacity: 0.9;
+    }
+    
+    /* Mejorar el área de toque */
+    .project-card,
+    .slider-card {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    /* Hacer scroll suave en el modal */
+    .modal {
+        -webkit-overflow-scrolling: touch;
+    }
+}
